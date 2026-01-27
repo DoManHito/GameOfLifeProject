@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "gCiBvgDOZxM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\slisi\\Projects\\csharp\\GameOfLifeProject\\Backend\\Backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\slisi\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0\\microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
+    "C:\\Users\\slisi\\.nuget\\packages\\microsoft.extensions.caching.stackexchangeredis\\10.0.2\\microsoft.extensions.caching.stackexchangeredis.10.0.2.nupkg.sha512",
+    "C:\\Users\\slisi\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\slisi\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\slisi\\.nuget\\packages\\stackexchange.redis\\2.7.27\\stackexchange.redis.2.7.27.nupkg.sha512"
+  ],
+  "logs": []
+}
