@@ -54,6 +54,16 @@ app.MapPost("api/game/state", async (IDistributedCache cache, GamePattern newPat
     
 });
 
+app.MapGet("api/game/new", async (IDistributedCache cache) =>
+{
+    game = new GameOfLife(32,64);
+    var currentGrid = game.CurrentGeneration.Data;
+
+    await cache.SetStringAsync("current_grid", JsonSerializer.Serialize(currentGrid));
+    
+    return Results.Json(currentGrid);
+});
+
 app.MapGet("api/game/next", async (IDistributedCache cache) =>
 {
     game.NextGeneration();

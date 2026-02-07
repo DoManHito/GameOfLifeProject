@@ -38,6 +38,7 @@ else
             }
         </div>
 
+        <button class="btn btn-primary" @onclick="StartNewGame">Start new game</button>
         <button class="btn btn-primary" @onclick="LoadNext">Next generation</button>
         @if(isAutoRunning){
             <button class="btn btn-primary" @onclick="() => isAutoRunning = false">Stop auto</button>
@@ -67,6 +68,10 @@ else
     protected override async Task OnInitializedAsync()
     {
         grid = await Http.GetFromJsonAsync<bool[][]>("api/game/state");
+    }
+
+    private async Task StartNewGame(){
+        grid = await Http.GetFromJsonAsync<bool[][]>("api/game/new");
     }
 
     private async Task LoadNext()
@@ -105,5 +110,6 @@ else
     private async Task LoadPattern(GamePattern selectedGrid)
     {
         await Http.PostAsJsonAsync("api/game/state", selectedGrid);
+        await OnInitializedAsync();
     }
 }
